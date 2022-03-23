@@ -1,7 +1,7 @@
 from settings import *
 import pygame
-
 import math
+
 
 class Player:
     def __init__(self):
@@ -20,27 +20,16 @@ class Player:
         if keys[pygame.K_w]:
             self.x += player_speed * cos_a
             self.y += player_speed * sin_a
-            print('W')
-        if keys[pygame.K_s]:
-            self.x += -player_speed * cos_a
-            self.y += -player_speed * sin_a
-            print('s')
         if keys[pygame.K_a]:
             self.x += player_speed * sin_a
             self.y += -player_speed * cos_a
-            print('a')
+        if keys[pygame.K_s]:
+            self.x += -player_speed * cos_a
+            self.y += -player_speed * sin_a
         if keys[pygame.K_d]:
             self.x += -player_speed * sin_a
             self.y += player_speed * cos_a
-            print('d')
         if keys[pygame.K_LEFT]:
-            self.angle -= 0.05
+            self.angle -= 0.03
         if keys[pygame.K_RIGHT]:
-            self.angle += 0.05
-
-
-
-
-
-
-
+            self.angle += 0.03
